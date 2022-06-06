@@ -3,46 +3,35 @@
 #about-us{
     background-color:$Clight ;
     max-width: 100vw;
-    h2{
-        color: $main-blue;
-        font-size: 100px;
-        font-family: "Raph Lanok Future",sans-serif;
-        text-align: center;
-        padding:50px 0;
-    }
+    
     div:first-of-type p{
-        font-size: 25px;
+        @include about-p;
         text-align: center;
-        line-height: 50px;
         color: $blue-text;
-        padding: 5px;
     }
     div:last-of-type p{
-        font-size: 35px;
+        @include cont-p;
         text-align: center;
         line-height: 50px;
         color: $blue-text;
         padding: 5px;
+        margin: 0;
     }
 }
 .contadores{
-    display: flex;
-    justify-content: center;
-  }
+    @include flex (flex, row, center, center);  
+}
   .cont{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 50px 50px;
+    @include flex (flex, column, center, center);
+    margin: 50px;
     div::before{
         content: "+";
-        color: #852004;
-        
+        color: #852004;  
       }
   }
   .number{
-    font-size: 50px;
-    color: #852004;
+    @include cont-n;
+    color: $board;
   
 }
 

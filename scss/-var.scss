@@ -1,9 +1,250 @@
+//Fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400&display=swap');
+@font-face {
+        font-family: Raph Lanok Future;
+        src: url(../fonts/RaphLanokFuture.ttf);
+ }
+
+ //Reset
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+html{
+    font-size: 10px;
+}
+
 //Main vars
-$main-blue:#004aca;
+$nav-blue:#004aca;
+$main-blue:#053c9b;
 $blue-text:#00266e;
 $dark-blue:rgb(7, 4, 39);
 $Clight: hwb(0 91% 9%);
-
+$board: #852004;
 //Cards
-$Cgold: rgb(255, 206, 0);
+
+$Cgold: rgb(250, 183, 0);
 $Cdark: #212121;
+//Functions
+@mixin flex ($flex, $direction, $just, $align){
+    display: $flex;
+    flex-direction: $direction;
+    justify-content: $just;
+    align-items:$align;  
+}
+
+
+//Font-sizes
+@mixin h1{
+    @media (min-width:1400px){
+        font-size: 40px;
+    }
+    @media (max-width:1400px){
+        font-size:35px;
+    }
+    @media (max-width:1200px){
+        font-size:30px;
+    }
+    @media (max-width:991px){
+        font-size:40px;
+    }
+    @media (max-width:576px){
+    font-size:35px;
+    }
+}
+@mixin li{ //Only for <991px
+    @media (max-width:991px){
+        margin: 0rem 1rem;
+        padding: 1.5rem;
+        a{
+            font-size:2rem;
+        }
+    }
+    @media (max-width:768px){
+        margin: 1rem;
+        padding: 0 1.5rem;
+        a{
+            font-size:2rem;
+        }
+    }
+    @media (max-width:576px){
+        margin: 0 .5rem;
+        padding: 0 1.5rem;
+        a{
+            font-size:1.8rem;
+        }
+    }
+
+    @media (max-width:500px){
+        margin: 0 .5rem;
+        padding: 0 1rem;
+
+    }
+
+    @media (max-width:368px){
+        margin: 0 .5rem;
+        padding: 0 .5rem;
+        a{
+            font-size:1.6rem;
+        }
+    }
+}
+@mixin main-title{
+    @media (min-width:1200px){
+        font-size:10rem;
+    }
+    @media (max-width:1200px){
+        font-size:10rem;
+    }
+    @media (max-width:991px){
+        font-size:10rem;
+    }
+    @media (max-width:768px){
+        font-size:10rem;
+    }
+    @media (max-width:576px){
+        font-size:8rem;
+    }
+    @media (max-width:368px){
+        font-size:8rem;
+    }
+}
+@mixin main-subtitle{
+    @media (min-width:1200px){
+        font-size:3rem;
+    }
+    @media (max-width:1200px){
+        font-size:3rem;
+    }
+    @media (max-width:991px){
+        font-size:3rem;
+    }
+    @media (max-width:768px){
+        font-size:2.5rem;
+    }
+    @media (max-width:576px){
+        font-size:2.5rem;
+    }
+    @media (max-width:368px){
+        font-size:2rem;
+    }
+}
+    //Intro
+@mixin video-title{
+    @media (min-width:1200px){
+        font-size:10rem;
+    }
+    @media (max-width:1200px){
+        font-size:8rem;
+    }
+    @media (max-width:991px){
+        font-size:8rem;
+    }
+    @media (max-width:768px){
+        font-size:6rem;
+    }
+    @media (max-width:576px){
+        font-size:5rem;
+    }
+    @media (max-width:368px){
+        font-size:4rem;
+    }
+}
+@mixin video-subtitle{
+    @media (min-width:1200px){
+        font-size:2rem;
+    }
+    @media (max-width:1200px){
+        font-size:1.8rem;
+    }
+    @media (max-width:991px){
+        font-size:1.8rem;
+    }
+    @media (max-width:768px){
+        font-size:1.6rem;
+    }
+    @media (max-width:576px){
+        font-size:1.6rem;
+    }
+    @media (max-width:368px){
+        font-size:2rem;
+    } 
+}
+    //About us
+@mixin about-p{
+    @media (min-width:1200px){
+        font-size:2.5rem;
+        line-height: 5rem;
+    }
+    @media (max-width:1200px){
+        font-size:2.5rem;
+        line-height: 5rem;
+    }
+    @media (max-width:991px){
+        font-size:2.5rem;
+        line-height: 5rem;
+    }
+    @media (max-width:768px){
+        font-size:2.5rem;
+        line-height: 5rem;
+    }
+    @media (max-width:576px){
+        font-size:2rem;
+        line-height: 3.5rem;
+    }
+    @media (max-width:368px){
+        font-size:1.8rem;
+        line-height: 3rem;
+    } 
+}
+@mixin cont-n{
+    @media (min-width:1200px){
+        font-size:5rem;
+    }
+    @media (max-width:1200px){
+        font-size:5rem;
+    }
+    @media (max-width:991px){
+        font-size:5rem;
+    }
+    @media (max-width:768px){
+        font-size:4.5rem;
+    }
+    @media (max-width:576px){
+        font-size:3.5rem;
+    }
+    @media (max-width:368px){
+        font-size:3rem;
+    } 
+}
+@mixin cont-p {
+    @media (min-width:1200px){
+        font-size:3.5rem;
+    }
+    @media (max-width:1200px){
+        font-size:3.5rem;
+    }
+    @media (max-width:991px){
+        font-size:3.5rem;
+    }
+    @media (max-width:768px){
+        font-size:3.5rem;
+    }
+    @media (max-width:576px){
+        font-size:3rem;
+    }
+    @media (max-width:368px){
+        font-size:2rem;
+    } 
+}
+    //Services
+
+        //Cards
+
+$cardP: 1.6rem;     //Card content + buttons
+$cardSubP: 2rem;    //h5
+
+
+

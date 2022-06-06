@@ -47,13 +47,28 @@
     flex-direction: column;
     align-items: center;
     justify-content:space-between ;
-    padding: 15px;
+    padding: 30px 30px 0 30px;
 }
 
-.cardFace-front h4{
+.cardFace-front{
+    h4{
     text-align: center;
     width: 80%;
-    color: #FFF
+    color: white;
+    font-size: 3rem;
+}
+p{
+    color: white;
+    font-size: 1.6rem;
+}
+li{
+    list-style: circle ;
+    color: white;
+    padding: 15px 0;
+    margin: 15px 0;
+    font-size: 1.7rem;
+
+}
 }
 .cardFace-back{
     background-color: $Clight;
@@ -61,8 +76,9 @@
     h4{
         color: white;
         text-align:center;
-        font-size: 35px;
+        font-size: 3.5rem;
     }
+    
 }
 .cardContent{
     width: 100%;
@@ -81,7 +97,7 @@
         top: 0;
         left: 50%;
         color: $Cgold;
-        font-size: 18px;
+        font-size: 1.8rem;
         padding-top: 5px;
         padding-left: 6px;
         margin: 0;
@@ -119,6 +135,10 @@
     align-items: center;
     padding: 20px;
     height: 80%;
+    h5{
+        margin: 0;
+        font-size: 2rem;
+    }
     img{
         height: 220px;
     }
@@ -128,6 +148,7 @@
         justify-content: center;
         align-items: center;
         p{
+            font-size: $cardP;
             text-align: center;
             font-weight: 700;
         }
@@ -151,6 +172,8 @@
             cursor: pointer;
             transition: all .2s;
             
+            font-size: 1.6rem;
+
             &:hover{
                 transform: scale(1.2);
                 color: $Cgold;
@@ -164,6 +187,7 @@
             text-align: center;
             width: 170px;
             font-weight: 700;
+            font-size: 1.6rem;
             background-image: linear-gradient(to bottom left, $main-blue 10%, rgb(7, 4, 39)
              115%);
             border-radius: 15px;
@@ -178,7 +202,13 @@
             }
         }
     }
-    
+}
+.cardBody-img{
+    border-radius: 15px;
+    overflow: hidden;
+    img{
+        height: 200px;
+    }
 }
 .flipBack, .flipBack2, .flipBack3{
     text-decoration: none;
@@ -188,6 +218,7 @@
     text-align: center;
     width: 170px;
     font-weight: 700;
+    font-size: 1.6rem;
     background-image: linear-gradient(to bottom left, $main-blue 10%, rgb(7, 4, 39)
      115%);
     border-radius: 15px;

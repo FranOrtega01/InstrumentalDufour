@@ -1,23 +1,16 @@
-@media (min-width:991px){
-    .absolute{
-        h2{
-            font-family: "Raph Lanok Future",sans-serif;
-            font-size: 7vw;
-        
-        }
-        p{
-            font-size: 1.4vw;
-        } 
+@media (max-width:991px){
+    #header.hide{
+        top: -200px;
+    }
+    .intro{
+        margin-top: 200px;
     }
 }
 
 
 @media (min-width: 1200px) and (max-width: 1400px)  {
-    h1{
-        font-size: 35px;
-    }
-    .grid-header{
-        
+
+    .grid-header{   
         nav{
             justify-content: center;
             ul{
@@ -34,13 +27,12 @@
         }
        
     }
-    
+    .intro{
+        margin-top: 90px;
+    }
 }
 
 @media (min-width: 992px) and (max-width: 1200px)  {
-    h1{
-        font-size: 30px;
-    }
     .grid-header{
         padding: 15px 0;
         nav{
@@ -51,7 +43,8 @@
                 justify-content: center;
                 li{
                     padding: 0;
-                    margin: 10px;
+                    margin: 15px;
+                   
                 }
             }
         }
@@ -64,12 +57,21 @@
 }
 
 @media (min-width:769px) and (max-width: 991px) {
+
     .grid-header{
         display: flex;
         flex-direction: column;
         >div:first-of-type{
             justify-content: center;
         }
+        nav {
+            position: relative;
+            height: 100%;
+            // .li{
+            //     padding: 15px;
+            //     margin: 0 10px;
+            // }
+        }  
     }
     .mediaA{
         display: inline;
@@ -77,29 +79,8 @@
     .mediaB{
         display: none;
     }
-    
-    nav {
-        position: relative;
-        height: 100%;
-        div{
-            position: absolute;
-            right: 0;      
-        }
-        li{
-            margin: 0px;
-            padding: 0px;
-            background-color: rebeccapurple;
-       }
-    }
-    .absolute{
-        h2{
-            font-family: "Raph Lanok Future",sans-serif;
-            font-size: 10vw;
-        
-        }
-        p{
-            font-size: 3vw;
-        } 
+    .intro{
+        margin-top: 165px;
     }
 }
 
@@ -112,15 +93,11 @@
         nav{
             display: flex;
             justify-content: space-around;
-            margin-bottom: 15px;
-            li{
-                padding: 0px 15px;
-                margin: 0px 5px;
-            }
-            div{
-                padding: 0px 15px;
-                margin: 0px 5px;
-            }
+            // margin-bottom: 15px;
+            // .li{
+            //     padding: 0px 15px;
+            //     margin: 10px;
+            // }
         }
     }
     .mediaA{
@@ -129,55 +106,51 @@
     .mediaB{
         display: none;
     }
-    .absolute{
-        h2{
-            font-family: "Raph Lanok Future",sans-serif;
-            font-size: 9vw;
-        
-        }
-        p{
-            font-size: 3vw;
-        } 
+    .intro{
+        margin-top: 155px;
     }
 }
 @media (max-width: 576px) {
+
     .grid-header{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        >div:first-of-type img{ //Logo-Title div
+            height: 90px;
+            width: 90px;
+            padding: 10;
+        }
         div:last-of-type{
-            align-items: flex-end;
+            justify-content: center;
+            align-items: center;
         }
         nav{
             display: flex;
             justify-content: space-around;
             margin-bottom: 15px;
-            li{
-                margin: 0px 5px;
-                padding: 0px;
-            }
-            div{
-                padding: 0px 15px;
-                margin: 0px 5px;
+            .li img{
+                height: 30px;
             }
         }
-    }
-    .mediaA{
-        display: none;
     }
     .mediaB{
+        display: none;
+    }
+    .mediaA{
         display: inline;
     }
-    .absolute{
-        h2{
-            font-family: "Raph Lanok Future",sans-serif;
-            font-size: 9vw;
-        
-        }
-        p{
-            font-size: 3vw;
-        } 
+    // Intro
+    .intro{
+        margin-top: 135px;
     }
-
+    //About us
+    .cont{
+        margin: 20px;
+    }
+    #about-us div:last-of-type p{ //Cont p
+        line-height: 3.5rem;
+    }
 }

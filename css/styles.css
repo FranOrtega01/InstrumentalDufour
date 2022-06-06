@@ -3,36 +3,92 @@
   font-family: Raph Lanok Future;
   src: url(../fonts/RaphLanokFuture.ttf); }
 
-.main-title {
-  color: #004aca;
-  font-size: 100px;
-  font-family: "Raph Lanok Future",sans-serif;
-  text-align: center;
-  padding: 50px 0;
+* {
   margin: 0;
-  margin-top: 50px; }
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none; }
+
+html {
+  font-size: 10px; }
 
 h1 {
-  color: #004aca;
+  color: #053c9b;
   text-align: center;
   font-size: 40px;
   font-family: "Raph Lanok Future",sans-serif;
   font-weight: 400;
   padding: 0 15px;
   margin: 0px; }
+  @media (min-width: 1400px) {
+    h1 {
+      font-size: 40px; } }
+  @media (max-width: 1400px) {
+    h1 {
+      font-size: 35px; } }
+  @media (max-width: 1200px) {
+    h1 {
+      font-size: 30px; } }
+  @media (max-width: 991px) {
+    h1 {
+      font-size: 40px; } }
+  @media (max-width: 576px) {
+    h1 {
+      font-size: 35px; } }
+
+.main-title {
+  color: #053c9b;
+  font-family: "Raph Lanok Future",sans-serif;
+  text-align: center;
+  padding: 50px 0;
+  margin: 50px 0; }
+  @media (min-width: 1200px) {
+    .main-title {
+      font-size: 10rem; } }
+  @media (max-width: 1200px) {
+    .main-title {
+      font-size: 10rem; } }
+  @media (max-width: 991px) {
+    .main-title {
+      font-size: 10rem; } }
+  @media (max-width: 768px) {
+    .main-title {
+      font-size: 10rem; } }
+  @media (max-width: 576px) {
+    .main-title {
+      font-size: 8rem; } }
+  @media (max-width: 368px) {
+    .main-title {
+      font-size: 8rem; } }
 
 .main-subtitle {
   color: #00266e;
-  font-size: 30px;
   text-align: center;
-  padding: 50px 0;
+  padding-bottom: 50px;
   margin: 0; }
+  @media (min-width: 1200px) {
+    .main-subtitle {
+      font-size: 3rem; } }
+  @media (max-width: 1200px) {
+    .main-subtitle {
+      font-size: 3rem; } }
+  @media (max-width: 991px) {
+    .main-subtitle {
+      font-size: 3rem; } }
+  @media (max-width: 768px) {
+    .main-subtitle {
+      font-size: 2.5rem; } }
+  @media (max-width: 576px) {
+    .main-subtitle {
+      font-size: 2.5rem; } }
+  @media (max-width: 368px) {
+    .main-subtitle {
+      font-size: 2rem; } }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  list-style: none; }
+.main-subtitle-comment {
+  color: #852004;
+  font-size: 25px;
+  text-align: center; }
 
 body a {
   text-decoration: none; }
@@ -43,7 +99,7 @@ body::-webkit-scrollbar {
   background-color: white; }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #004aca;
+  background-color: #053c9b;
   border-radius: 30px; }
 
 .grid-header {
@@ -51,65 +107,103 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
   grid-template-columns: 1fr 1fr 1fr; }
 
-header img {
-  padding: 15px;
-  width: 100px; }
-
-header a {
-  color: black;
-  font-size: 20px;
-  transition: all 200ms; }
-
-header > div:first-of-type {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  grid-template: title; }
-
-header div:last-of-type {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding-right: 15px; }
-  header div:last-of-type img {
-    width: 35px;
-    padding: 5px; }
-
-header nav {
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-  header nav ul {
+.grid-header {
+  width: 100%; }
+  .grid-header img {
+    padding: 15px;
+    width: 100px; }
+  .grid-header a {
+    color: black;
+    font-size: 20px;
+    transition: all 200ms; }
+  .grid-header > div:first-of-type {
     display: flex;
-    flex-direction: row;
-    margin: 0;
-    padding: 0; }
-    header nav ul li {
-      margin: 20px;
-      padding: 15px;
-      transition: all 200ms; }
-      header nav ul li:hover {
-        transform: scale(1.2); }
-      header nav ul li a {
-        color: black;
-        font-size: 20px;
-        transition: all .25s ease;
-        position: relative; }
-        header nav ul li a::after {
-          content: "";
-          width: 100%;
-          height: 1px;
-          background-color: #004aca;
-          position: absolute;
-          left: 0;
-          bottom: 0;
-          transform: scaleX(0);
-          transform-origin: left;
-          transition: all .25s ease; }
-        header nav ul li a:hover {
-          color: #004aca; }
-          header nav ul li a:hover::after {
-            transform: scaleX(1); }
+    justify-content: flex-start;
+    align-items: center;
+    grid-template: title; }
+  .grid-header div:last-of-type {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 15px; }
+    .grid-header div:last-of-type img {
+      width: 35px;
+      padding: 5px; }
+  .grid-header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .grid-header nav ul {
+      display: flex;
+      flex-direction: row;
+      margin: 0;
+      padding: 0; }
+      .grid-header nav ul li {
+        margin: 20px;
+        padding: 15px;
+        transition: all 200ms; }
+        .grid-header nav ul li:hover {
+          transform: scale(1.2); }
+        .grid-header nav ul li a {
+          color: black;
+          font-size: 20px;
+          transition: all .25s ease;
+          position: relative; }
+          .grid-header nav ul li a::after {
+            content: "";
+            width: 100%;
+            height: 1px;
+            background-color: #004aca;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: all .25s ease; }
+          .grid-header nav ul li a:hover {
+            color: #053c9b; }
+            .grid-header nav ul li a:hover::after {
+              transform: scaleX(1); }
+    @media (max-width: 991px) {
+      .grid-header nav .li {
+        margin: 0rem 1rem;
+        padding: 1.5rem; }
+        .grid-header nav .li a {
+          font-size: 2rem; } }
+    @media (max-width: 768px) {
+      .grid-header nav .li {
+        margin: 1rem;
+        padding: 0 1.5rem; }
+        .grid-header nav .li a {
+          font-size: 2rem; } }
+    @media (max-width: 576px) {
+      .grid-header nav .li {
+        margin: 0 .5rem;
+        padding: 0 1.5rem; }
+        .grid-header nav .li a {
+          font-size: 1.8rem; } }
+    @media (max-width: 500px) {
+      .grid-header nav .li {
+        margin: 0 .5rem;
+        padding: 0 1rem; } }
+    @media (max-width: 368px) {
+      .grid-header nav .li {
+        margin: 0 .5rem;
+        padding: 0 .5rem; }
+        .grid-header nav .li a {
+          font-size: 1.6rem; } }
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 1;
+  transition: all .3s ease; }
+
+#header.hide {
+  top: -100px; }
 
 .mediaA {
   display: none; }
@@ -120,13 +214,15 @@ header nav {
   bottom: 0px;
   right: 0px;
   padding: 15px;
-  width: 75px; }
+  width: 75px;
+  z-index: 1; }
 
 .intro {
   width: 100%;
   max-height: 100vh;
   overflow: hidden;
-  position: relative; }
+  position: relative;
+  margin-top: 100px; }
   .intro video {
     width: 100%;
     height: 100%; }
@@ -144,6 +240,42 @@ header nav {
     flex-direction: column; }
     .intro .absolute h2 {
       font-family: "Raph Lanok Future",sans-serif; }
+      @media (min-width: 1200px) {
+        .intro .absolute h2 {
+          font-size: 10rem; } }
+      @media (max-width: 1200px) {
+        .intro .absolute h2 {
+          font-size: 8rem; } }
+      @media (max-width: 991px) {
+        .intro .absolute h2 {
+          font-size: 8rem; } }
+      @media (max-width: 768px) {
+        .intro .absolute h2 {
+          font-size: 6rem; } }
+      @media (max-width: 576px) {
+        .intro .absolute h2 {
+          font-size: 5rem; } }
+      @media (max-width: 368px) {
+        .intro .absolute h2 {
+          font-size: 4rem; } }
+    @media (min-width: 1200px) {
+      .intro .absolute p {
+        font-size: 2rem; } }
+    @media (max-width: 1200px) {
+      .intro .absolute p {
+        font-size: 1.8rem; } }
+    @media (max-width: 991px) {
+      .intro .absolute p {
+        font-size: 1.8rem; } }
+    @media (max-width: 768px) {
+      .intro .absolute p {
+        font-size: 1.6rem; } }
+    @media (max-width: 576px) {
+      .intro .absolute p {
+        font-size: 1.6rem; } }
+    @media (max-width: 368px) {
+      .intro .absolute p {
+        font-size: 2rem; } }
   .intro .overlay {
     width: 100%;
     height: 100%;
@@ -155,41 +287,94 @@ header nav {
 #about-us {
   background-color: hwb(0 91% 9%);
   max-width: 100vw; }
-  #about-us h2 {
-    color: #004aca;
-    font-size: 100px;
-    font-family: "Raph Lanok Future",sans-serif;
-    text-align: center;
-    padding: 50px 0; }
   #about-us div:first-of-type p {
-    font-size: 25px;
     text-align: center;
-    line-height: 50px;
-    color: #00266e;
-    padding: 5px; }
+    color: #00266e; }
+    @media (min-width: 1200px) {
+      #about-us div:first-of-type p {
+        font-size: 2.5rem;
+        line-height: 5rem; } }
+    @media (max-width: 1200px) {
+      #about-us div:first-of-type p {
+        font-size: 2.5rem;
+        line-height: 5rem; } }
+    @media (max-width: 991px) {
+      #about-us div:first-of-type p {
+        font-size: 2.5rem;
+        line-height: 5rem; } }
+    @media (max-width: 768px) {
+      #about-us div:first-of-type p {
+        font-size: 2.5rem;
+        line-height: 5rem; } }
+    @media (max-width: 576px) {
+      #about-us div:first-of-type p {
+        font-size: 2rem;
+        line-height: 3.5rem; } }
+    @media (max-width: 368px) {
+      #about-us div:first-of-type p {
+        font-size: 1.8rem;
+        line-height: 3rem; } }
   #about-us div:last-of-type p {
-    font-size: 35px;
     text-align: center;
     line-height: 50px;
     color: #00266e;
-    padding: 5px; }
+    padding: 5px;
+    margin: 0; }
+    @media (min-width: 1200px) {
+      #about-us div:last-of-type p {
+        font-size: 3.5rem; } }
+    @media (max-width: 1200px) {
+      #about-us div:last-of-type p {
+        font-size: 3.5rem; } }
+    @media (max-width: 991px) {
+      #about-us div:last-of-type p {
+        font-size: 3.5rem; } }
+    @media (max-width: 768px) {
+      #about-us div:last-of-type p {
+        font-size: 3.5rem; } }
+    @media (max-width: 576px) {
+      #about-us div:last-of-type p {
+        font-size: 3rem; } }
+    @media (max-width: 368px) {
+      #about-us div:last-of-type p {
+        font-size: 2rem; } }
 
 .contadores {
   display: flex;
-  justify-content: center; }
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
 
 .cont {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  margin: 50px 50px; }
+  margin: 50px; }
   .cont div::before {
     content: "+";
     color: #852004; }
 
 .number {
-  font-size: 50px;
   color: #852004; }
+  @media (min-width: 1200px) {
+    .number {
+      font-size: 5rem; } }
+  @media (max-width: 1200px) {
+    .number {
+      font-size: 5rem; } }
+  @media (max-width: 991px) {
+    .number {
+      font-size: 5rem; } }
+  @media (max-width: 768px) {
+    .number {
+      font-size: 4.5rem; } }
+  @media (max-width: 576px) {
+    .number {
+      font-size: 3.5rem; } }
+  @media (max-width: 368px) {
+    .number {
+      font-size: 3rem; } }
 
 @keyframes aparecer {
   0% {
@@ -206,7 +391,7 @@ header nav {
   animation: aparecer 1s; }
 
 .featured {
-  border: solid 4px #ffce00;
+  border: solid 4px #fab700;
   box-shadow: 0px 0px 55px -6px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 0px 0px 55px -6px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 55px -6px rgba(0, 0, 0, 0.75); }
@@ -242,17 +427,29 @@ header nav {
   border-radius: 16px; }
 
 .cardFace-front {
-  background-image: linear-gradient(to bottom right, #004aca 1%, #070427);
+  background-image: linear-gradient(to bottom right, #053c9b 1%, #070427);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 15px; }
+  padding: 30px 30px 0 30px; }
 
 .cardFace-front h4 {
   text-align: center;
   width: 80%;
-  color: #FFF; }
+  color: white;
+  font-size: 3rem; }
+
+.cardFace-front p {
+  color: white;
+  font-size: 1.6rem; }
+
+.cardFace-front li {
+  list-style: circle;
+  color: white;
+  padding: 15px 0;
+  margin: 15px 0;
+  font-size: 1.7rem; }
 
 .cardFace-back {
   background-color: hwb(0 91% 9%);
@@ -260,7 +457,7 @@ header nav {
   .cardFace-back h4 {
     color: white;
     text-align: center;
-    font-size: 35px; }
+    font-size: 3.5rem; }
 
 .cardContent {
   width: 100%;
@@ -277,8 +474,8 @@ header nav {
     position: absolute;
     top: 0;
     left: 50%;
-    color: #ffce00;
-    font-size: 18px;
+    color: #fab700;
+    font-size: 1.8rem;
     padding-top: 5px;
     padding-left: 6px;
     margin: 0; }
@@ -301,7 +498,7 @@ header nav {
     bottom: 0;
     z-index: -1;
     border-radius: 0 0 50% 0;
-    background-image: linear-gradient(to bottom left, #004aca 10%, #070427 115%); }
+    background-image: linear-gradient(to bottom left, #053c9b 10%, #070427 115%); }
 
 .cardBody {
   display: flex;
@@ -310,6 +507,9 @@ header nav {
   align-items: center;
   padding: 20px;
   height: 80%; }
+  .cardBody h5 {
+    margin: 0;
+    font-size: 2rem; }
   .cardBody img {
     height: 220px; }
   .cardBody div {
@@ -318,6 +518,7 @@ header nav {
     justify-content: center;
     align-items: center; }
     .cardBody div p {
+      font-size: 1.6rem;
       text-align: center;
       font-weight: 700; }
   .cardBody > div:last-of-type {
@@ -330,15 +531,16 @@ header nav {
       color: white;
       width: 170px;
       font-weight: 700;
-      background-image: linear-gradient(to bottom right, #004aca 10%, #070427 115%);
+      background-image: linear-gradient(to bottom right, #053c9b 10%, #070427 115%);
       border-radius: 15px;
       padding: 15px 20px;
       margin: 15px 15px;
       cursor: pointer;
-      transition: all .2s; }
+      transition: all .2s;
+      font-size: 1.6rem; }
       .cardBody > div:last-of-type a:hover {
         transform: scale(1.2);
-        color: #ffce00; }
+        color: #fab700; }
     .cardBody > div:last-of-type button {
       text-decoration: none;
       outline: none;
@@ -347,7 +549,8 @@ header nav {
       text-align: center;
       width: 170px;
       font-weight: 700;
-      background-image: linear-gradient(to bottom left, #004aca 10%, #070427 115%);
+      font-size: 1.6rem;
+      background-image: linear-gradient(to bottom left, #053c9b 10%, #070427 115%);
       border-radius: 15px;
       padding: 15px 20px;
       margin: 15px 15px;
@@ -357,6 +560,12 @@ header nav {
         transform: scale(1.2);
         color: #ffbf00; }
 
+.cardBody-img {
+  border-radius: 15px;
+  overflow: hidden; }
+  .cardBody-img img {
+    height: 200px; }
+
 .flipBack, .flipBack2, .flipBack3 {
   text-decoration: none;
   outline: none;
@@ -365,7 +574,8 @@ header nav {
   text-align: center;
   width: 170px;
   font-weight: 700;
-  background-image: linear-gradient(to bottom left, #004aca 10%, #070427 115%);
+  font-size: 1.6rem;
+  background-image: linear-gradient(to bottom left, #053c9b 10%, #070427 115%);
   border-radius: 15px;
   padding: 15px 20px;
   margin: 15px 15px;
@@ -377,18 +587,15 @@ header nav {
 
 #contact {
   height: 100vh;
-  background-color: antiquewhite; }
+  background-color: hwb(0 91% 9%); }
 
-@media (min-width: 991px) {
-  .absolute h2 {
-    font-family: "Raph Lanok Future",sans-serif;
-    font-size: 7vw; }
-  .absolute p {
-    font-size: 1.4vw; } }
+@media (max-width: 991px) {
+  #header.hide {
+    top: -200px; }
+  .intro {
+    margin-top: 200px; } }
 
 @media (min-width: 1200px) and (max-width: 1400px) {
-  h1 {
-    font-size: 35px; }
   .grid-header nav {
     justify-content: center; }
     .grid-header nav ul {
@@ -398,11 +605,11 @@ header nav {
         margin: 10px; }
   .grid-header img {
     width: 90px;
-    height: 90px; } }
+    height: 90px; }
+  .intro {
+    margin-top: 90px; } }
 
 @media (min-width: 992px) and (max-width: 1200px) {
-  h1 {
-    font-size: 30px; }
   .grid-header {
     padding: 15px 0; }
     .grid-header nav {
@@ -413,7 +620,7 @@ header nav {
         justify-content: center; }
         .grid-header nav ul li {
           padding: 0;
-          margin: 10px; }
+          margin: 15px; }
     .grid-header img {
       width: 70px;
       height: 70px;
@@ -425,25 +632,15 @@ header nav {
     flex-direction: column; }
     .grid-header > div:first-of-type {
       justify-content: center; }
+    .grid-header nav {
+      position: relative;
+      height: 100%; }
   .mediaA {
     display: inline; }
   .mediaB {
     display: none; }
-  nav {
-    position: relative;
-    height: 100%; }
-    nav div {
-      position: absolute;
-      right: 0; }
-    nav li {
-      margin: 0px;
-      padding: 0px;
-      background-color: rebeccapurple; }
-  .absolute h2 {
-    font-family: "Raph Lanok Future",sans-serif;
-    font-size: 10vw; }
-  .absolute p {
-    font-size: 3vw; } }
+  .intro {
+    margin-top: 165px; } }
 
 @media (min-width: 576px) and (max-width: 768px) {
   .grid-header {
@@ -453,23 +650,13 @@ header nav {
     align-items: center; }
     .grid-header nav {
       display: flex;
-      justify-content: space-around;
-      margin-bottom: 15px; }
-      .grid-header nav li {
-        padding: 0px 15px;
-        margin: 0px 5px; }
-      .grid-header nav div {
-        padding: 0px 15px;
-        margin: 0px 5px; }
+      justify-content: space-around; }
   .mediaA {
     display: inline; }
   .mediaB {
     display: none; }
-  .absolute h2 {
-    font-family: "Raph Lanok Future",sans-serif;
-    font-size: 9vw; }
-  .absolute p {
-    font-size: 3vw; } }
+  .intro {
+    margin-top: 155px; } }
 
 @media (max-width: 576px) {
   .grid-header {
@@ -477,24 +664,26 @@ header nav {
     flex-direction: column;
     justify-content: center;
     align-items: center; }
+    .grid-header > div:first-of-type img {
+      height: 90px;
+      width: 90px;
+      padding: 10; }
     .grid-header div:last-of-type {
-      align-items: flex-end; }
+      justify-content: center;
+      align-items: center; }
     .grid-header nav {
       display: flex;
       justify-content: space-around;
       margin-bottom: 15px; }
-      .grid-header nav li {
-        margin: 0px 5px;
-        padding: 0px; }
-      .grid-header nav div {
-        padding: 0px 15px;
-        margin: 0px 5px; }
-  .mediaA {
-    display: none; }
+      .grid-header nav .li img {
+        height: 30px; }
   .mediaB {
+    display: none; }
+  .mediaA {
     display: inline; }
-  .absolute h2 {
-    font-family: "Raph Lanok Future",sans-serif;
-    font-size: 9vw; }
-  .absolute p {
-    font-size: 3vw; } }
+  .intro {
+    margin-top: 135px; }
+  .cont {
+    margin: 20px; }
+  #about-us div:last-of-type p {
+    line-height: 3.5rem; } }
