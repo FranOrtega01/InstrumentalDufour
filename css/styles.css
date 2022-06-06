@@ -35,6 +35,9 @@ h1 {
   @media (max-width: 576px) {
     h1 {
       font-size: 35px; } }
+  @media (max-width: 400px) {
+    h1 {
+      font-size: 30px; } }
 
 .main-title {
   color: #053c9b;
@@ -185,8 +188,8 @@ body::-webkit-scrollbar-thumb {
     @media (max-width: 500px) {
       .grid-header nav .li {
         margin: 0 .5rem;
-        padding: 0 1rem; } }
-    @media (max-width: 368px) {
+        padding: 0 .5rem; } }
+    @media (max-width: 400px) {
       .grid-header nav .li {
         margin: 0 .5rem;
         padding: 0 .5rem; }
@@ -440,16 +443,17 @@ body::-webkit-scrollbar-thumb {
   color: white;
   font-size: 3rem; }
 
-.cardFace-front p {
-  color: white;
-  font-size: 1.6rem; }
-
 .cardFace-front li {
   list-style: circle;
   color: white;
   padding: 15px 0;
   margin: 15px 0;
   font-size: 1.7rem; }
+  @media (max-width: 576px) {
+    .cardFace-front li {
+      font-size: 1.4rem;
+      padding: 0;
+      margin: 10px 0; } }
 
 .cardFace-back {
   background-color: hwb(0 91% 9%);
@@ -475,10 +479,13 @@ body::-webkit-scrollbar-thumb {
     top: 0;
     left: 50%;
     color: #fab700;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     padding-top: 5px;
     padding-left: 6px;
     margin: 0; }
+    @media (max-width: 576px) {
+      .cardHead p {
+        font-size: 1.4rem; } }
   .cardHead div {
     display: flex;
     justify-content: center;
@@ -488,6 +495,9 @@ body::-webkit-scrollbar-thumb {
       width: 100%;
       align-items: center;
       margin: 0; }
+      @media (max-width: 576px) {
+        .cardHead div h4 {
+          font-size: 2.5rem; } }
   .cardHead::after {
     content: "";
     display: block;
@@ -510,6 +520,9 @@ body::-webkit-scrollbar-thumb {
   .cardBody h5 {
     margin: 0;
     font-size: 2rem; }
+    @media (max-width: 576px) {
+      .cardBody h5 {
+        font-size: 1.2rem; } }
   .cardBody img {
     height: 220px; }
   .cardBody div {
@@ -521,6 +534,9 @@ body::-webkit-scrollbar-thumb {
       font-size: 1.6rem;
       text-align: center;
       font-weight: 700; }
+      @media (max-width: 576px) {
+        .cardBody div p {
+          font-size: 1.4rem; } }
   .cardBody > div:last-of-type {
     width: 100%;
     display: flex;
@@ -538,6 +554,9 @@ body::-webkit-scrollbar-thumb {
       cursor: pointer;
       transition: all .2s;
       font-size: 1.6rem; }
+      @media (max-width: 576px) {
+        .cardBody > div:last-of-type a {
+          font-size: 1.3rem; } }
       .cardBody > div:last-of-type a:hover {
         transform: scale(1.2);
         color: #fab700; }
@@ -556,6 +575,9 @@ body::-webkit-scrollbar-thumb {
       margin: 15px 15px;
       cursor: pointer;
       transition: all .2s; }
+      @media (max-width: 576px) {
+        .cardBody > div:last-of-type button {
+          font-size: 1.3rem; } }
       .cardBody > div:last-of-type button:hover {
         transform: scale(1.2);
         color: #ffbf00; }
@@ -676,7 +698,8 @@ body::-webkit-scrollbar-thumb {
       justify-content: space-around;
       margin-bottom: 15px; }
       .grid-header nav .li img {
-        height: 30px; }
+        height: 30px;
+        width: 30px; }
   .mediaB {
     display: none; }
   .mediaA {
@@ -686,4 +709,37 @@ body::-webkit-scrollbar-thumb {
   .cont {
     margin: 20px; }
   #about-us div:last-of-type p {
-    line-height: 3.5rem; } }
+    line-height: 3.5rem; }
+  .Cards {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap; }
+  .Card {
+    margin: 20px;
+    width: 315px;
+    height: 420px; }
+    .Card img {
+      display: none; }
+  .cardBody {
+    height: 75%; }
+    .cardBody > div:last-of-type a, .cardBody > div:last-of-type button {
+      padding: 15px 15px; }
+  .cardHead {
+    height: 120px; }
+    .cardHead p {
+      left: 40%; }
+  .cardFace-front {
+    padding: 15px 15px 0 15px; }
+    .cardFace-front ul {
+      margin: 0; } }
+
+@media (max-width: 500px) {
+  .grid-header nav .li img {
+    display: none; }
+  .intro {
+    margin-top: 132px; } }
+
+@media (max-width: 400px) {
+  .intro {
+    margin-top: 129px; } }

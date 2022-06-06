@@ -133,6 +133,7 @@
             margin-bottom: 15px;
             .li img{
                 height: 30px;
+                width: 30px;
             }
         }
     }
@@ -152,5 +153,54 @@
     }
     #about-us div:last-of-type p{ //Cont p
         line-height: 3.5rem;
+    }
+    //Services
+
+    .Cards{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+    .Card{
+        margin: 20px;
+        width: 315px;
+        height: 420px;
+        img{
+            display: none;
+        }
+    }
+    .cardBody{
+        height: 75%;
+        >div:last-of-type{
+            a, button{
+                padding: 15px 15px;
+            }
+        }
+    }
+    .cardHead{
+        height: 120px;
+        p{
+            left: 40%;
+        }
+    }
+    .cardFace-front{
+        padding: 15px 15px 0 15px;
+        ul{
+            margin: 0;
+        }
+    }
+}
+@media (max-width: 500px) {//Adjust header gap
+    .grid-header nav .li img{
+        display: none;
+    }
+    .intro{
+        margin-top: 132px;
+    }
+}
+@media (max-width: 400px) {//Adjust header gap
+    .intro{
+        margin-top: 129px;
     }
 }

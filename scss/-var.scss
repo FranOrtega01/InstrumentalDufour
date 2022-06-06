@@ -53,6 +53,9 @@ $Cdark: #212121;
     @media (max-width:576px){
     font-size:35px;
     }
+    @media (max-width:400px){
+        font-size:30px;
+        }
 }
 @mixin li{ //Only for <991px
     @media (max-width:991px){
@@ -79,11 +82,11 @@ $Cdark: #212121;
 
     @media (max-width:500px){
         margin: 0 .5rem;
-        padding: 0 1rem;
+        padding: 0 .5rem;
 
     }
 
-    @media (max-width:368px){
+    @media (max-width:400px){
         margin: 0 .5rem;
         padding: 0 .5rem;
         a{
@@ -242,7 +245,38 @@ $Cdark: #212121;
     //Services
 
         //Cards
-
+@mixin card-title{
+    @media (max-width: 576px){
+        font-size: 2.5rem;
+    }
+}
+@mixin card-p{
+    @media (max-width: 576px){
+        font-size: 1.4rem;
+    }
+}
+@mixin card-sub-p{
+    @media (max-width: 576px){
+        font-size: 1.2rem;
+    }
+}
+@mixin card-boton{
+    @media (max-width: 576px){
+        font-size: 1.3rem;
+    }
+}
+@mixin card-featured{
+    @media (max-width: 576px){
+        font-size: 1.4rem;
+    }
+}
+@mixin card-flipped-p {
+    @media (max-width: 576px){
+        font-size: 1.4rem;
+        padding:0;
+        margin: 10px 0;
+    }
+}
 $cardP: 1.6rem;     //Card content + buttons
 $cardSubP: 2rem;    //h5
 

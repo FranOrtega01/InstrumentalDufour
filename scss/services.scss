@@ -57,16 +57,18 @@
     color: white;
     font-size: 3rem;
 }
-p{
-    color: white;
-    font-size: 1.6rem;
-}
+// p{
+//     color: white;
+//     font-size: 1.6rem;
+//     @include ;
+// }
 li{
     list-style: circle ;
     color: white;
     padding: 15px 0;
     margin: 15px 0;
     font-size: 1.7rem;
+    @include card-flipped-p
 
 }
 }
@@ -84,7 +86,7 @@ li{
     width: 100%;
     height: 100%;
 }
-.cardHead{
+.cardHead{ //Card head
     position: relative;
     // padding: 30px 30px 40px;
     height: 144px;
@@ -92,17 +94,18 @@ li{
     justify-content: center;
     align-items: center;
     position: relative;
-    p{
+    p{ //Card featured 
         position: absolute;
         top: 0;
         left: 50%;
         color: $Cgold;
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         padding-top: 5px;
         padding-left: 6px;
         margin: 0;
+        @include card-featured;
     }
-   div{
+   div{ //Head title
        display: flex;
        justify-content: center;
        align-items: center;
@@ -111,9 +114,10 @@ li{
             width: 100%;
             align-items: center;
             margin: 0;
+            @include card-title;
         }
    }
-    &::after{
+    &::after{ //Head background
         content: "";
         display: block;
         position:absolute;
@@ -128,16 +132,17 @@ li{
 
     }   
 }
-.cardBody{
+.cardBody{ //Card body
     display: flex;
     flex-direction:column ;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
     height: 80%;
-    h5{
+    h5{ //Card sub-p (only avai...)
         margin: 0;
         font-size: 2rem;
+        @include card-sub-p;
     }
     img{
         height: 220px;
@@ -151,10 +156,11 @@ li{
             font-size: $cardP;
             text-align: center;
             font-weight: 700;
+            @include card-p;
         }
         
     }
-    >div:last-of-type{
+    >div:last-of-type{ //buttons
         width: 100%;
         display: flex;
         flex-direction: row;
@@ -173,6 +179,7 @@ li{
             transition: all .2s;
             
             font-size: 1.6rem;
+            @include card-boton;
 
             &:hover{
                 transform: scale(1.2);
@@ -188,6 +195,8 @@ li{
             width: 170px;
             font-weight: 700;
             font-size: 1.6rem;
+            @include card-boton;
+
             background-image: linear-gradient(to bottom left, $main-blue 10%, rgb(7, 4, 39)
              115%);
             border-radius: 15px;
