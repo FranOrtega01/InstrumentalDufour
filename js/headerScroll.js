@@ -7,6 +7,10 @@
 
     //Function
     var header = document.getElementById("header");
+
+    var treshold = 165;
+    var toggled
+
     var checkScroll = function() {
         curScroll = w.scrollY || doc.scrollTop;
         if (curScroll > prevScroll){
@@ -16,19 +20,27 @@
             curDirection = 1;
         }
         if (curDirection !== prevDirection){
-            toggleHeader();
+            toggled = toggleHeader();
         }
-        prevDirection = curDirection;
+        if(toggled) {
+            prevDirection = curDirection;
+        }
+        
         prevScroll = curScroll;
     };
 
     var toggleHeader = function() {
-        if (curDirection === 2){
+        toggled = true;
+        if (curDirection === 2 && curScroll > treshold){
             header.classList.add("hide");
         }
         else if (curDirection ===1){
             header.classList.remove("hide");
         }
+        else{
+            toggled = false;
+        }
+        return toggled;
     };
     window.addEventListener("scroll", checkScroll);
 })();

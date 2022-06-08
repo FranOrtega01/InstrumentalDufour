@@ -738,8 +738,14 @@ body::-webkit-scrollbar-thumb {
   .grid-header nav .li img {
     display: none; }
   .intro {
-    margin-top: 132px; } }
+    margin-top: 132px; }
+  .main-subtitle {
+    margin: 0 10px; }
+  .main-subtitle-comment {
+    font-size: 20px; } }
 
 @media (max-width: 400px) {
   .intro {
-    margin-top: 129px; } }
+    margin-top: 129px; }
+  .main-subtitle-comment {
+    font-size: 18px; } }
