@@ -198,9 +198,18 @@
     .intro{
         margin-top: 132px;
     }
+    .main-subtitle{
+        margin: 0 10px;
+    }
+    .main-subtitle-comment{
+        font-size:20px ;
+    }
 }
 @media (max-width: 400px) {//Adjust header gap
     .intro{
         margin-top: 129px;
+    }
+    .main-subtitle-comment{
+        font-size:18px ;
     }
 }
