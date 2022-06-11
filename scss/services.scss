@@ -230,6 +230,7 @@ li{
     font-size: 1.6rem;
     background-image: linear-gradient(to bottom left, $main-blue 10%, rgb(7, 4, 39)
      115%);
+    border:2px solid $Clight;
     border-radius: 15px;
     padding: 15px 20px;
     margin: 15px 15px;
@@ -239,6 +240,7 @@ li{
     &:hover{
         transform: scale(1.2);
         color: rgb(255, 191, 0);
+
     }
 }
 

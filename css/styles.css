@@ -203,10 +203,11 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
   background-color: white;
   z-index: 1;
-  transition: all .3s ease; }
+  transition: all .3s ease;
+  border-bottom: 1px solid #053c9b; }
 
 #header.hide {
-  top: -100px; }
+  top: -101px; }
 
 .mediaA {
   display: none; }
@@ -598,6 +599,7 @@ body::-webkit-scrollbar-thumb {
   font-weight: 700;
   font-size: 1.6rem;
   background-image: linear-gradient(to bottom left, #053c9b 10%, #070427 115%);
+  border: 2px solid hwb(0 91% 9%);
   border-radius: 15px;
   padding: 15px 20px;
   margin: 15px 15px;
@@ -613,7 +615,7 @@ body::-webkit-scrollbar-thumb {
 
 @media (max-width: 991px) {
   #header.hide {
-    top: -200px; }
+    top: -201px; }
   .intro {
     margin-top: 200px; } }
 
