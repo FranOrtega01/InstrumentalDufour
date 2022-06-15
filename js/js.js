@@ -41,3 +41,13 @@ addEventListener("DOMContentLoaded" , () => {
     })
 })
 
+//Form
+var uploadField = document.getElementById("file");
+
+uploadField.onchange = function() {
+    if(this.files[0].size > 1048576*3){  //1MB
+       alert("File is too big!");
+       this.value = "";
+    };
+};
+

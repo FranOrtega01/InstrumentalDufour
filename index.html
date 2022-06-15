@@ -44,29 +44,30 @@
                 <a class="mediaB" href="#"> Our platform</a>
                 <a class="mediaB" href="#"> <img src="img/login_black_24dp.svg" alt="Sign in"> </a>  
             </div>
-        </div>
-        
+        </div> 
     </header>
-
 
     <main>
         <section class="intro ">
             <div class="overlay"></div>
             <div class="absolute">
-                <h2>Instrumental Dufour</h2>
+                <h2 class="video-title" >Instrumental Dufour</h2>
                 <p>Providing magnetic compass services and certificates since 1939</p>
             </div>
-            <!-- <video autoplay loop muted>
+            <video autoplay loop muted>
                 <source src="img/Buque.mp4" type="video/mp4">
-            </video> -->
-            <img src="img/Starry-Night-Over-the-Rhone-Featured-1.jpg" alt="">
+            </video>
+            <!-- <img src="img/Starry-Night-Over-the-Rhone-Featured-1.jpg" alt=""> -->
             
         </section>
-        <a href="https://api.whatsapp.com/send?phone=+5491154558216" target="_blank"> <img src="img/wpp.png" id="wpp" alt="Whatsapp"> </a>
+        <a href="https://api.whatsapp.com/send?phone=+5491154558216" target="_blank"> <img src="img/wpp.png" id="wpp" alt="Whatsapp"></a>
+
+        <!-- About us -->
+
         <section id="about-us" class="container">
             <article class="row justify-content-center">
                 <h2 class="main-title">About us</h2>
-                <div class="col-xxl-8 col-xl-8 col-lg-9 col-md-10 col-sm-11">
+                <div class="about-us-p col-xxl-8 col-xl-8 col-lg-9 col-md-10 col-sm-11">
                     <p >Instrumental Dufour was found in 1939, and since then we have been providing all kind of services for magnetic compass. Not only, repairing and calibrating them but also, issuing worldwide authorized deviation curves and certificates. </p>
                     <p>We are the first company who introduced remote calibration for magnetic compass while navigating all around the world, making ships able to posses all documentation required by SOLAS whitout docking at ports or having a technicician on-board.</p>
 
@@ -85,11 +86,17 @@
             </article>
             
         </section>
+
+        <!-- Services -->
         <section id="services">
             <h2 class="main-title col-12">Services</h2>
             <h3 class="main-subtitle"> We are greatful to provide you our services below</h3 >
             <h4 class="main-subtitle-comment" >Get it all done in 24hs or less</h4>
+
+                <!-- Cards -->
+
             <div class="Cards">
+                <!-- Card remote calibration -->
                 <div class="Card" >
                     <div class="cardInner isFlipped">
                         <div class="cardFace cardFace-front featured" >
@@ -113,7 +120,7 @@
                                     </div>
                                         <img src="img/asd.png" alt="">
                                     <div>
-                                        <a href="#">Purchase</a>
+                                        <a href="#">Get Budget</a>
                                         <button class="flip"> Read More</button>
                                     </div>
                                 </div>
@@ -122,7 +129,7 @@
                         </div>
                     </div>
                 </div>
-
+                <!-- Remote On-Board Calibration -->
                 <div class="Card">
                     <div class="cardInner2 isFlipped ">
                         <div class="cardFace cardFace-front">
@@ -147,7 +154,7 @@
                                     </div>
                                     <h5>*Only available while navigating in Argentina</h5>
                                     <div>
-                                        <a href="#">Purchase</a>
+                                        <a href="#">Get Budget</a>
                                         <button class="flip2"> Read More</button>
                                     </div>
                                 </div>
@@ -156,6 +163,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- Card Magnetic Compass Reparation -->
                 <div class="Card">
                     <div class="cardInner3 isFlipped">
                         <div class="cardFace cardFace-front">
@@ -179,7 +187,7 @@
                                         <img src="img/compass.png" alt="">
                                         <h5>*Only available while navigating in Argentina</h5>
                                     <div>
-                                        <a href="#">Purchase</a>
+                                        <a href="#">Get Budget</a>
                                         <button class="flip3"> Read More</button>
                                     </div>
                                 </div>
@@ -190,14 +198,93 @@
                 </div>
             </div>      
         </section>
+
+        <!-- Contact -->
         <section id="contact">
-            <h2 class="main-title col-12">Contact</h2>
-            <form action="">
-                <label for="guti">GUTI</label>
-                <input type="text" name="lastname"/>
-                <select name="" id=""></select>
-            </form>
+            <h2 class="main-title">Contact</h2>
+            <div class="container-fluid d-flex justify-content-xxl-center justify-content-xl-center justify-content-lg-center justify-content-md-center justify-content-sm-start">
+                <div class="contact-cont row col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-12 col-12
+                justify-content-sm-start">
+
+                    <!-- Contact Info -->
+
+                    <div class="info-cont col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-10 col-11">
+                        <!-- Email -->
+                        <div class="info-section">
+                            <h3 class="info-title ">E-mail</h3>
+                            <a class="info-desc" href="mailto:info@instrumentaldufour.net?" target="_blank"><i class="fa fa-envelope "></i>info@instrumentaldufour.net</a>
+                        </div>
+                        <!-- Phone Number -->
+                        <div class="info-section">
+                            <h3 class="info-title line">Call Us</h3>
+                            <a class="info-desc" href="tel:+5491154558216"><i class="fa fa-phone "></i>+54 9 11 5455-8216</a>
+                        </div>
+                        <!-- Schedule -->
+                        <div class="info-section">
+                            <h3 class="info-title line">Schedule</h3>
+                            <p class="info-desc"><i class="fa fa-clock-o "></i>7:00 - 19:00 GMT-3 </p>
+                        <!-- Location -->
+                        </div>
+                        <div class="info-section">
+                            <h3 class="info-title line">Location</h3>
+                            <a class="info-desc" href="https://www.google.com.ar/maps/place/Don+Orione+651,+B1644BMK+Victoria,+Provincia+de+Buenos+Aires/@-34.4498962,-58.5329934,17z/data=!3m1!4b1!4m5!3m4!1s0x95bcafc2baa559d3:0x92650a2d94c8a27a!8m2!3d-34.4498962!4d-58.5308047" target="_blank"><i class="fa fa-map-marker"></i>Don Orione 651, Victoria, Buenos Aires, Argentina CP: 1644</a>
+                        </div> 
+                        <!-- GMaps -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3290.076503327108!2d-58.53247840069983!3d-34.45020583281726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcafc2baa559d3%3A0x92650a2d94c8a27a!2sDon%20Orione%20651%2C%20B1644BMK%20Victoria%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1655146210835!5m2!1ses-419!2sar" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    
+                    <!-- Form -->
+                    <div class="form-cont col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-10 col-11">
+                            <form action="">
+                                <h3 class="form-title">Contact Form</h3>
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input class="input" type="text" name="name" placeholder="Enter your name" required/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="name">Enterprice</label>
+                                    <input class="input" type="text" name="enterprice" placeholder="Enter your enterprice" required/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone</label>
+                                    <input class="input" type="number" name="phone" placeholder="Enter your phone number" required/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input class="input" type="email" name="email" placeholder="Enter your email adress" required/>
+                                </div>
+                                <div class="form-group">
+                                    <p>Service</p>
+                                    <select name="service" id="dropdown" required>
+                                        <option class="selected" disabled selected value>Select an option</option>
+                                        <option value="Remote Calibration">Remote Calibration</option>
+                                        <option value="On-Board Calibration">On-Board Calibration</option>
+                                        <option value="Magnetic Compass Reparation">Magnetic Compass Reparation</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <p>What u need? Some wheels?</p>
+                                <textarea name="textarea" id="" cols="30" rows="10" placeholder="Leave a comment here..."></textarea>
+                                </div>
+                            </form>     
+                    </div>
+                    
+                </div>
+            </div>
         </section>
+        <footer>
+            <div class="footer-grid">
+                <a class="footer-title" href="#">Instrumental Dufour</a>
+                <p class="footer-slogan">Providing magnetic compass services and certificates since 1939</p>
+                <div class="footer-info-cont">
+                    <div class="footer-info">
+                        <a href="tel:+5491154558216"><i class="fa fa-phone "></i>+54 9 11 5455-8216</a>
+                        <a href="mailto:info@instrumentaldufour.net?" target="_blank"><i class="fa fa-envelope "></i>info@instrumentaldufour.net</a>
+                    </div>
+                </div>
+            </div>
+            <p class="made-by">Copyright<i>•</i><a class="made-by" href="https://www.linkedin.com/in/franco-ortega-48838123b/" target="_blank">By Fran Ortega</a></p> 
+        </footer>
     </main>
     <script src="js/headerScroll.js"></script>
     <script src="js/cards.js"></script>

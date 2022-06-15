@@ -4,11 +4,6 @@
     background-color:$Clight ;
     max-width: 100vw;
     
-    div:first-of-type p{
-        @include about-p;
-        text-align: center;
-        color: $blue-text;
-    }
     div:last-of-type p{
         @include cont-p;
         text-align: center;
@@ -17,6 +12,12 @@
         padding: 5px;
         margin: 0;
     }
+}
+.about-us-p p{
+    @include about-p;
+    text-align: center;
+    color: $blue-text;
+    margin-bottom: 15px
 }
 .contadores{
     @include flex (flex, row, center, center);  

@@ -5,6 +5,26 @@
     .intro{
         margin-top: 200px;
     }
+    .info-cont iframe{
+        width: 300px;
+        height: 250px;
+    }
+    form textarea{
+        height: 11rem;
+    }
+    .contact-cont{
+        margin: 0;
+    }
+}
+@media (max-width:769px){
+    .contact-cont{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    form{
+        width: 100%;
+    }
 }
 @media (min-width: 1200px) and (max-width: 1400px)  {
 
@@ -80,6 +100,32 @@
     .intro{
         margin-top: 165px;
     }
+    .footer-title{
+        grid-area: title;
+    }
+    .footer-slogan{
+        grid-area:slogan;
+    }
+    .footer-info-cont{
+        grid-area: info;
+    }
+    .footer-info{
+        @include flex (flex,row,unset, unset);
+        margin: 30px 0;
+        a{
+            margin: 0px 40px;
+        }
+    }
+    .footer-grid{
+        display: grid;
+        grid-template-columns: unset;
+        grid-template-areas:
+        "title slogan"
+        "info info"
+        ;
+        margin: 0;
+    }
+   
 }
 
 @media (min-width:576px) and (max-width: 768px) {
@@ -102,6 +148,45 @@
     .intro{
         margin-top: 155px;
     }
+    //Contact
+    .contact-cont{
+        padding: 30px 0 0 0;
+    }
+    .form-cont{
+        margin: 100px 0;
+    }
+
+    //Footer
+    footer{
+        padding: 20px 20px 0;
+    }
+    .footer-title{
+        grid-area: title;
+    }
+    .footer-slogan{
+        grid-area:slogan;
+        padding: 10px;
+    }
+    .footer-info-cont{
+        grid-area: info;
+    }
+    .footer-info{
+        @include flex (flex,row,unset, unset);
+        margin: 30px 0;
+        a{
+            margin: 0px 30px;
+        }
+    }
+    .footer-grid{
+        display: grid;
+        grid-template-columns: unset;
+        grid-template-areas:
+        "title slogan"
+        "info info"
+        ;
+        margin-bottom: 0;
+    }
+
 }
 @media (max-width: 576px) {
 
@@ -183,6 +268,30 @@
             margin: 0;
         }
     }
+    //Contact
+    .contact-cont{
+        padding: 30px 0 0 0;
+    }
+    .form-cont{
+        margin: 100px 0;
+    }
+    //Footer
+    .footer-grid{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-slogan{
+        padding: 0 30px;
+        margin-top: 30px
+    }
+    .footer-info{
+        @include flex (flex,row,unset, unset);
+        margin: 30px 0;
+        a{
+            margin: 0px 15px;
+        }
+    }
 }
 @media (max-width: 500px) {//Adjust header gap
     .grid-header nav .li img{
@@ -197,6 +306,16 @@
     .main-subtitle-comment{
         font-size:20px ;
     }
+    .footer-slogan{
+        padding: 0 30px
+    }
+    .footer-info{
+        @include flex (flex,column,unset, unset);
+        margin: 15px 0;
+        a{
+            margin: 5px 15px;
+        }
+    }
 }
 @media (max-width: 400px) {//Adjust header gap.
     .intro{
@@ -209,6 +328,9 @@
         font-size:18px ;
         margin: 0 10px;
 
+    }
+    .footer-slogan{
+        padding: 0;
     }
 }
 

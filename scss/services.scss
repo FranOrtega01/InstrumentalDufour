@@ -1,13 +1,9 @@
-//Cards
-
+#services{
+    margin-bottom: 50px;
+}
 
 // Featured
-.featured{
-    border: solid 4px $Cgold;
-    box-shadow: 0px 0px 55px -6px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 0px 0px 55px -6px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 55px -6px rgba(0,0,0,0.75);
-}
+
 //
 .Cards{
     display: flex;
@@ -39,6 +35,9 @@
     backface-visibility: hidden;
     overflow: hidden;
     border-radius: 16px;
+    box-shadow: 0px 0px 55px -6px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 0px 0px 55px -6px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 0px 55px -6px rgba(0,0,0,0.4);
     
 }
 .cardFace-front{
@@ -57,11 +56,7 @@
     color: white;
     font-size: 3rem;
 }
-// p{
-//     color: white;
-//     font-size: 1.6rem;
-//     @include ;
-// }
+
 li{
     list-style: circle ;
     color: white;
@@ -213,7 +208,7 @@ li{
     }
 }
 .cardBody-img{
-    border-radius: 15px;
+    border-radius: 10px;
     overflow: hidden;
     img{
         height: 200px;
@@ -242,6 +237,12 @@ li{
         color: rgb(255, 191, 0);
 
     }
+}
+.featured{
+    border: solid 4px $Cgold;
+    box-shadow: 0px 0px 55px -6px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 55px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 55px -6px rgba(0,0,0,0.75);
 }
 
 

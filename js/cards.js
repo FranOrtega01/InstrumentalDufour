@@ -36,3 +36,22 @@ button3.addEventListener("click", function () {
 buttonBack3.addEventListener("click", function () {
     card3.classList.toggle("isFlipped")
 });
+
+
+var defaultd = document.getElementsById("default");
+// 
+
+function changeForm(){
+    readmore1.addEventListener("click", function() {
+        defaultd.removeAttribute("selected");
+    });
+}
+
+var defaultd = document.getElementsById("default");
+// 
+
+function changeForm(){
+    button.addEventListener("click", function() {
+        defaultd.removeAttribute("selected");
+    });
+}
