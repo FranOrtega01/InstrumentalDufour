@@ -13,8 +13,7 @@
 
     <script src="https://kit.fontawesome.com/a4c52e9ef0.js" crossorigin="anonymous"></script>
     <script src="js/js.js"></script>
-
-
+    <script src="js/alert.js"></script>
 </head>
 <body>
     <!-- Header -->
@@ -33,20 +32,20 @@
                     <li class="li"> <a href="#contact">Contact</a></li>
                 </ul>
                 <div class="li">
-                    <a class="mediaA" href="#"> Our platform</a>
-                    <a class="mediaA" href="#"> <img src="img/login_black_24dp.svg" alt="Sign in"> </a>  
-                      </button>   
+                    <p class="mediaA" onclick="alerteffect()"> Our platform</p>
+                    <p class="mediaA" onclick="alerteffect()"> <img src="img/login_black_24dp.svg" alt="Sign in"> </p> 
                 </div>
             </nav>
     
             <!-- Sign In -->
-            <div >
-                <a class="mediaB" href="#"> Our platform</a>
-                <a class="mediaB" href="#"> <img src="img/login_black_24dp.svg" alt="Sign in"> </a>  
+
+            <div>
+                <p class="mediaB" onclick="alerteffect()"> Our platform</p>
+                <p class="mediaB" onclick="alerteffect()"> <img src="img/login_black_24dp.svg" alt="Sign in"> </p> 
             </div>
         </div> 
     </header>
-
+    
     <main>
         <section class="intro ">
             <div class="overlay"></div>
@@ -60,6 +59,16 @@
             <img src="img/Starry-Night-Over-the-Rhone-Featured-1.jpg" alt="">
             
         </section>
+        <!-- Platform Alert -->
+
+        <div class="hidden" id="alert">
+            <i class="fa-solid fa-circle-info"></i>
+            <span class="msg">Cooming soon! We are working for you.</span>
+            <span class="close-btn" onclick="alertclose()"><i class="fa fa-xmark"></i></span>
+        </div>
+        
+        <!-- WhatsApp Logo -->
+
         <a href="https://api.whatsapp.com/send?phone=+5491154558216" target="_blank"> <img src="img/wpp.png" id="wpp" alt="Whatsapp"></a>
 
         <!-- About us -->
@@ -290,6 +299,8 @@
     <script src="js/cards.js"></script>
     <script src="js/js.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="js/alert.js"></script> -->
+
 </body>
 
 </html>

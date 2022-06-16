@@ -40,6 +40,7 @@ h1{
 //
 
 body{
+    overflow-x: hidden;
     a{
         text-decoration: none;
     }
@@ -153,6 +154,11 @@ body{
 //Our Platform
 .mediaA{
     display: none;
+    cursor: pointer;
+}
+.mediaB{
+    font-size: 20px;
+    cursor: pointer;
 }
 //Logo WhatsApp Fixed
 #wpp{
@@ -226,5 +232,4 @@ footer{
         }
     }   
 }
-
 

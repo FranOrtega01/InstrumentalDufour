@@ -96,17 +96,17 @@ h1 {
   font-size: 25px;
   text-align: center; }
 
-body a {
-  text-decoration: none; }
-
-body::-webkit-scrollbar {
-  width: 7px;
-  height: 30px;
-  background-color: white; }
-
-body::-webkit-scrollbar-thumb {
-  background-color: #053c9b;
-  border-radius: 30px; }
+body {
+  overflow-x: hidden; }
+  body a {
+    text-decoration: none; }
+  body::-webkit-scrollbar {
+    width: 7px;
+    height: 30px;
+    background-color: white; }
+  body::-webkit-scrollbar-thumb {
+    background-color: #053c9b;
+    border-radius: 30px; }
 
 .grid-header {
   display: grid;
@@ -177,19 +177,19 @@ body::-webkit-scrollbar-thumb {
       .grid-header nav .li {
         margin: 0rem 1rem;
         padding: 1.5rem; }
-        .grid-header nav .li a {
+        .grid-header nav .li a, .grid-header nav .li p {
           font-size: 2rem; } }
     @media (max-width: 768px) {
       .grid-header nav .li {
         margin: 1rem;
         padding: 0 1.5rem; }
-        .grid-header nav .li a {
+        .grid-header nav .li a, .grid-header nav .li p {
           font-size: 2rem; } }
     @media (max-width: 576px) {
       .grid-header nav .li {
         margin: 0 .5rem;
         padding: 0 1.5rem; }
-        .grid-header nav .li a {
+        .grid-header nav .li a, .grid-header nav .li p {
           font-size: 1.8rem; } }
     @media (max-width: 500px) {
       .grid-header nav .li {
@@ -199,7 +199,7 @@ body::-webkit-scrollbar-thumb {
       .grid-header nav .li {
         margin: 0 .5rem;
         padding: 0 .5rem; }
-        .grid-header nav .li a {
+        .grid-header nav .li a, .grid-header nav .li p {
           font-size: 1.6rem; } }
 
 #header {
@@ -216,7 +216,12 @@ body::-webkit-scrollbar-thumb {
   top: -101px; }
 
 .mediaA {
-  display: none; }
+  display: none;
+  cursor: pointer; }
+
+.mediaB {
+  font-size: 20px;
+  cursor: pointer; }
 
 #wpp {
   position: fixed;
@@ -819,9 +824,9 @@ form .input, form select, form textarea {
   border: none;
   border-bottom: 1px solid #acacac;
   outline: none;
-  transition: all 100ms; }
+  transition: all 150ms; }
   form .input:focus, form select:focus, form textarea:focus {
-    border-bottom: 2px solid #727272; }
+    border-bottom: 2px solid #053c9b; }
 
 form select {
   padding: 0 0 0 10px;
@@ -852,6 +857,72 @@ form textarea {
 
 .form-title {
   margin-bottom: 2rem; }
+
+#alert {
+  background-color: rgba(0, 89, 222, 0.7);
+  padding: 20px 40px;
+  margin: 0;
+  min-width: 420px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 100;
+  border-radius: 4px;
+  border-left: 6px solid #053c9b; }
+
+.show {
+  animation: show_slide 1s ease forwards; }
+
+@keyframes show_slide {
+  0% {
+    transform: translateX(100%); }
+  40% {
+    transform: translateX(-10%); }
+  80% {
+    transform: translateX(0%); }
+  100% {
+    transform: translateX(0%); } }
+
+.hidden {
+  display: none; }
+
+.hide {
+  animation: hide_slide 1.5s ease forwards; }
+
+@keyframes hide_slide {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+.fa-circle-info {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #00266e;
+  font-size: 30px; }
+
+.msg {
+  padding: 0 20px;
+  font-size: 18px;
+  color: #00266e;
+  color: white; }
+
+.close-btn {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  cursor: pointer; }
+  .close-btn .fa-xmark {
+    font-size: 25px;
+    text-align: center;
+    color: #00266e;
+    color: black; }
+    .close-btn .fa-xmark:hover {
+      opacity: .7; }
 
 @media (max-width: 991px) {
   #header.hide {

@@ -93,10 +93,11 @@ form{
         border: none;
         border-bottom: 1px solid rgb(172, 172, 172);
         outline: none;
-        transition: all 100ms;
+        transition: all 150ms;
 
         &:focus{
-            border-bottom: 2px solid rgb(114, 114, 114);
+            border-bottom: 2px solid $main-blue;
+            // border-bottom: 2px solid rgb(114, 114, 114);
         }
     }
     select{
