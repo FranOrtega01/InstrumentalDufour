@@ -8,7 +8,7 @@ function alerteffect(){
             alerta.classList.add("hidden");  
             alerta.classList.remove("show");
             alerta.classList.remove("hide");    
-        }, 1500); 
+        }, 1200); 
     }, 3000);
 }
 
@@ -19,5 +19,5 @@ function alertclose(){
         alerta.classList.add("hidden");  
         alerta.classList.remove("show");
         alerta.classList.remove("hide");    
-    }, 1500);
+    }, 1200);
 }
