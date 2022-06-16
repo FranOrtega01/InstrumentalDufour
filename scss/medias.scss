@@ -316,6 +316,19 @@
             margin: 5px 15px;
         }
     }
+
+    //Platform Alert Pop
+    #alert{
+        max-width: 200px;
+        padding: 20px 10px;
+    }
+    .fa-circle-info{
+        font-size: 25px;
+    }
+    .msg{
+        padding: 0 15px 0 40px ;
+    }
+
 }
 @media (max-width: 400px) {//Adjust header gap.
     .intro{

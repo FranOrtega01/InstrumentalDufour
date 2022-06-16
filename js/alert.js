@@ -1,5 +1,5 @@
 function alerteffect(){
-    var alerta = document.getElementById("alert");
+    let alerta = document.getElementById("alert");
     alerta.classList.remove("hidden");
     alerta.classList.add("show");
     setTimeout(() => {
@@ -13,7 +13,7 @@ function alerteffect(){
 }
 
 function alertclose(){
-    var alerta = document.getElementById("alert");
+    let alerta = document.getElementById("alert");
     alerta.classList.add("hide");
     setTimeout(() => {
         alerta.classList.add("hidden");  

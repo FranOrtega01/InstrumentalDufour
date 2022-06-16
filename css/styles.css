@@ -1144,7 +1144,14 @@ form textarea {
     align-items: unset;
     margin: 15px 0; }
     .footer-info a {
-      margin: 5px 15px; } }
+      margin: 5px 15px; }
+  #alert {
+    max-width: 200px;
+    padding: 20px 10px; }
+  .fa-circle-info {
+    font-size: 25px; }
+  .msg {
+    padding: 0 15px 0 40px; } }
 
 @media (max-width: 400px) {
   .intro {
