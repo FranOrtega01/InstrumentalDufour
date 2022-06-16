@@ -863,7 +863,7 @@ form textarea {
   padding: 20px 40px;
   margin: 0;
   min-width: 420px;
-  position: absolute;
+  position: fixed;
   right: 20px;
   top: 20px;
   z-index: 100;
