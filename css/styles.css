@@ -862,7 +862,7 @@ form textarea {
   background-color: rgba(0, 89, 222, 0.7);
   padding: 20px 40px;
   margin: 0;
-  min-width: 420px;
+  width: 450px;
   position: fixed;
   right: 20px;
   top: 20px;
@@ -1146,12 +1146,17 @@ form textarea {
     .footer-info a {
       margin: 5px 15px; }
   #alert {
-    max-width: 200px;
-    padding: 20px 10px; }
+    width: 320px;
+    padding: 20px 0px;
+    right: 10px; }
   .fa-circle-info {
-    font-size: 25px; }
+    font-size: 20px;
+    left: 5px; }
   .msg {
-    padding: 0 15px 0 40px; } }
+    font-size: 14px;
+    padding: 0 0 0 30px; }
+  .close-btn .fa-xmark {
+    font-size: 20px; } }
 
 @media (max-width: 400px) {
   .intro {
