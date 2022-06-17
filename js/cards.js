@@ -37,21 +37,10 @@ buttonBack3.addEventListener("click", function () {
     card3.classList.toggle("isFlipped")
 });
 
+//Select Function
 
-var defaultd = document.getElementsById("default");
-// 
+function select(){
+    var service = document.getElementById("service");
 
-function changeForm(){
-    readmore1.addEventListener("click", function() {
-        defaultd.removeAttribute("selected");
-    });
-}
-
-var defaultd = document.getElementsById("default");
-// 
-
-function changeForm(){
-    button.addEventListener("click", function() {
-        defaultd.removeAttribute("selected");
-    });
+    service.val("A").trigger("change");
 }

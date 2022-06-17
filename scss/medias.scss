@@ -26,6 +26,11 @@
         width: 100%;
     }
 }
+@media (min-width:1400px){
+    .cont .number, .cont p{
+        font-weight: 500;
+    }
+}
 @media (min-width: 1200px) and (max-width: 1400px)  {
 
     .grid-header{   
@@ -47,6 +52,9 @@
     }
     .intro{
         margin-top: 90px;
+    }
+    .cont .number, .cont p{
+        font-weight: 500;
     }
 }
 
@@ -71,6 +79,9 @@
             height: 70px;
             padding: 5px;
         }   
+    }
+    .cont .number, .cont p{
+        font-weight: 500;
     }
 }
 
@@ -148,6 +159,12 @@
     .intro{
         margin-top: 155px;
     }
+    //About us
+    .about-us-p p{
+        text-align: justify;
+        margin: 0 15px;
+    }
+
     //Contact
     .contact-cont{
         padding: 30px 0 0 0;
@@ -229,6 +246,11 @@
     .cont{
         margin: 20px;
     }
+     //About us
+     .about-us-p p{
+        text-align: justify;
+        margin: 0 15px;
+    }
     #about-us div:last-of-type p{ //Cont p
         line-height: 3.5rem;
     }
@@ -245,11 +267,12 @@
         width: 315px;
         height: 420px;
         img{
-            display: none;
+            height: 100px;
         }
     }
     .cardBody{
         height: 75%;
+        padding: 10px 20px 20px 20px;
         >div:last-of-type{
             a, button{
                 padding: 15px 15px;
@@ -257,7 +280,7 @@
         }
     }
     .cardHead{
-        height: 120px;
+        height: 130px;
         p{
             left: 40%;
         }
@@ -306,6 +329,8 @@
     .main-subtitle-comment{
         font-size:20px ;
     }
+    //Cards
+    //Footer
     .footer-slogan{
         padding: 0 30px
     }

@@ -9,11 +9,14 @@
 
     <link rel="icon" href="img/brujula.gif">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    
 
     <script src="https://kit.fontawesome.com/a4c52e9ef0.js" crossorigin="anonymous"></script>
-    <script src="js/js.js"></script>
-    <script src="js/alert.js"></script>
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+
 </head>
 <body>
     <!-- Header -->
@@ -63,17 +66,17 @@
 
         <div class="hidden" id="alert">
             <i class="fa-solid fa-circle-info"></i>
-            <span class="msg">Cooming soon! We are working for you.</span>
+            <span class="msg">Coming soon! We are working for you.</span>
             <span class="close-btn" onclick="alertclose()"><i class="fa fa-xmark"></i></span>
         </div>
         
         <!-- WhatsApp Logo -->
 
-        <a href="https://api.whatsapp.com/send?phone=+5491154558216" target="_blank"> <img src="img/wpp.png" id="wpp" alt="Whatsapp"></a>
+        <a href="https://api.whatsapp.com/send?phone=5491154558216" target="_blank"> <img src="img/wpp.png" id="wpp" alt="Whatsapp"></a>
 
         <!-- About us -->
 
-        <section id="about-us" class="container">
+        <section id="about-us" class="container" data-aos="fade-up" data-aos-duration="600">
             <article class="row justify-content-center">
                 <h2 class="main-title">About us</h2>
                 <div class="about-us-p col-xxl-8 col-xl-8 col-lg-9 col-md-10 col-sm-11">
@@ -82,6 +85,7 @@
 
                     <p>Our enterprice counts with NI-07 authorization from the argentinian Coast Guard Department (PNA), making us an authorized laboratory for repairing all kind of magnetic compasses and giving our certificates all necessary international validations to be presented to any Coast Guard Authority or organization.  </p>
                 </div>
+                <!-- About us numbers -->
                 <div class="contadores">
                     <div class="cont ocultar">
                         <div class="number " data-cantidad-total="4000">0</div>
@@ -97,14 +101,14 @@
         </section>
 
         <!-- Services -->
-        <section id="services">
+        <section id="services" data-aos="fade-up" data-aos-duration="600">
             <h2 class="main-title col-12">Services</h2>
             <h3 class="main-subtitle"> We are greatful to provide you our services below</h3 >
             <h4 class="main-subtitle-comment" >Get it all done in 24hs or less</h4>
 
                 <!-- Cards -->
 
-            <div class="Cards">
+            <div class="Cards" data-aos="fade-up" data-aos-duration="800">
                 <!-- Card remote calibration -->
                 <div class="Card" >
                     <div class="cardInner isFlipped">
@@ -129,7 +133,18 @@
                                     </div>
                                         <img src="img/asd.png" alt="">
                                     <div>
-                                        <a href="#">Get Budget</a>
+                                        <a href="#form" id="remote">Get Budget</a>
+                                        <script>
+                                            $('#remote').click(function(){ 
+                                                $('#service').val('Remote Calibration').trigger('change');
+                                                $('#service').removeClass("selected");
+                                                $('#textLabel').html("Ask for a budget");
+                                                  
+                                                setTimeout(() => {
+                                                    $('#service').addClass("selected");  
+                                                }, 400);
+                                            })
+                                        </script>
                                         <button class="flip"> Read More</button>
                                     </div>
                                 </div>
@@ -163,7 +178,18 @@
                                     </div>
                                     <h5>*Only available while navigating in Argentina</h5>
                                     <div>
-                                        <a href="#">Get Budget</a>
+                                        <a href="#form" id="on-board">Get Budget</a>
+                                        <script>
+                                            $('#on-board').click(function(){ 
+                                                $('#service').val('On-Board Calibration').trigger('change');
+                                                $('#service').removeClass("selected"); 
+                                                $('#textLabel').html("Ask for a budget");
+                                                setTimeout(() => {
+                                                    $('#service').addClass("selected");  
+                                                }, 500);
+
+                                            })
+                                        </script>
                                         <button class="flip2"> Read More</button>
                                     </div>
                                 </div>
@@ -196,7 +222,18 @@
                                         <img src="img/compass.png" alt="">
                                         <h5>*Only available while navigating in Argentina</h5>
                                     <div>
-                                        <a href="#">Get Budget</a>
+                                        <a href="#form" id="magnetic">Get Budget</a>
+                                        <script>
+                                            $('#magnetic').click(function(){ 
+                                                $('#service').val('Magnetic Compass Reparation').trigger('change');
+                                                $('#service').removeClass("selected");
+                                                $('#textLabel').html("Ask for a budget");
+                                                setTimeout(() => {
+                                                    $('#service').addClass("selected");  
+                                                }, 500);   
+                                            })
+                                            
+                                        </script>
                                         <button class="flip3"> Read More</button>
                                     </div>
                                 </div>
@@ -209,10 +246,11 @@
         </section>
 
         <!-- Contact -->
-        <section id="contact">
+
+        <section id="contact" data-aos="fade-up" data-aos-duration="600">
             <h2 class="main-title">Contact</h2>
             <div class="container-fluid d-flex justify-content-xxl-center justify-content-xl-center justify-content-lg-center justify-content-md-center justify-content-sm-start">
-                <div class="contact-cont row col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-12 col-12
+                <div class="contact-cont row col-xxl-9 col-xl-9 col-lg-10 col-md-10 col-sm-12 col-12
                 justify-content-sm-start">
 
                     <!-- Contact Info -->
@@ -243,15 +281,16 @@
                     </div>
                     
                     <!-- Form -->
+
                     <div class="form-cont col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-10 col-11">
-                            <form action="">
+                            <form action="email.php" method="POST" id="form">
                                 <h3 class="form-title">Contact Form</h3>
                                 <div class="form-group">
                                     <label for="name">Name</label>
                                     <input class="input" type="text" name="name" placeholder="Enter your name" required/>
                                 </div>
                                 <div class="form-group">
-                                    <label for="name">Enterprice</label>
+                                    <label for="enterprice">Enterprice</label>
                                     <input class="input" type="text" name="enterprice" placeholder="Enter your enterprice" required/>
                                 </div>
                                 <div class="form-group">
@@ -263,17 +302,21 @@
                                     <input class="input" type="email" name="email" placeholder="Enter your email adress" required/>
                                 </div>
                                 <div class="form-group">
-                                    <p>Service</p>
-                                    <select name="service" id="dropdown" required>
-                                        <option class="selected" disabled selected value>Select an option</option>
-                                        <option value="Remote Calibration">Remote Calibration</option>
+                                    <label for="service">Select</label>
+                                    <select name="service" class="" id="service" required>
+                                        <option vlaue="">Select an option</option>
+                                        <option value="Rmote Calibration">Remote Calibration</option>
                                         <option value="On-Board Calibration">On-Board Calibration</option>
                                         <option value="Magnetic Compass Reparation">Magnetic Compass Reparation</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <p>What u need? Some wheels?</p>
-                                <textarea name="textarea" id="" cols="30" rows="10" placeholder="Leave a comment here..."></textarea>
+                                    <label for="textarea" id="textLabel">Leave us your questions</label>
+                                    <textarea name="textarea" id="" cols="30" rows="10" placeholder="Leave your comment"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" name="submit" value="Send request">
+                                    <!-- <button type="submit">Send request</button> -->
                                 </div>
                             </form>     
                     </div>
@@ -281,6 +324,9 @@
                 </div>
             </div>
         </section>
+
+        <!-- Footer -->
+
         <footer>
             <div class="footer-grid">
                 <a class="footer-title" href="#">Instrumental Dufour</a>
@@ -295,11 +341,18 @@
             <p class="made-by">Copyright<i>•</i><a class="made-by" href="https://www.linkedin.com/in/franco-ortega-48838123b/" target="_blank">By Fran Ortega</a></p> 
         </footer>
     </main>
+
+    <!-- Scripts -->
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script src="js/headerScroll.js"></script>
     <script src="js/cards.js"></script>
     <script src="js/js.js"></script>
+    <script src="js/alert.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
-    <!-- <script src="js/alert.js"></script> -->
 
 </body>
 

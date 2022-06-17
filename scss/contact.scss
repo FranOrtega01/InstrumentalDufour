@@ -76,7 +76,24 @@ p.info-desc{
 //Form
 .form-group{
     @include flex (flex,column,unset,unset);
-    margin-bottom: 25px; 
+    margin-bottom: 25px;
+    input[type=submit]{
+        margin: 0 auto;
+        padding: 5px 0;
+        width: 200px;
+        font-size: 16px;
+        border: none;
+        outline: none;
+        background-color: $Contact;
+        border-radius: 4px;
+        font-weight: 500;
+        color: $blue-text;
+        transition: all 200ms ;
+
+        &:hover{
+            transform: scale(1.2);
+        }
+    }
 }
 
 form{
@@ -97,13 +114,13 @@ form{
 
         &:focus{
             border-bottom: 2px solid $main-blue;
-            // border-bottom: 2px solid rgb(114, 114, 114);
         }
     }
     select{
         @extend .input;
         padding: 0 0 0 10px;
         height: 4rem;
+        font-weight: 600;
         option{
             font-size: 1.7rem;
         }
@@ -116,6 +133,13 @@ form{
         height: 14rem;
         color: rgb(66, 66, 66);
         resize: none;
+        &::-webkit-scrollbar{
+            width: 5px;
+        }
+        &::-webkit-scrollbar-thumb{
+            background-color: rgb(172, 172, 172);
+            border-radius: 30px;
+        } 
     }
 }
 .contact-cont{
@@ -133,6 +157,14 @@ form{
         transform: translate(-50%,0);     
     }
 }
+.selected{
+    animation: selected 500ms;
+}
+@keyframes selected{
+    50%{transform: scale(1.2);}
+    100%{transform: scale(1);}
+}
+
 .form-title{
     @extend .info-title;
     margin-bottom: 2rem;

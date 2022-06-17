@@ -62,10 +62,12 @@ h1 {
       font-size: 10rem; } }
   @media (max-width: 576px) {
     .main-title {
-      font-size: 8rem; } }
+      font-size: 8rem;
+      padding: 50px 0; } }
   @media (max-width: 368px) {
     .main-title {
-      font-size: 8rem; } }
+      font-size: 8rem;
+      padding: 50px 0; } }
 
 .main-subtitle {
   color: #00266e;
@@ -493,13 +495,13 @@ footer {
   color: #852004; }
   @media (min-width: 1200px) {
     .number {
-      font-size: 5rem; } }
+      font-size: 4.5rem; } }
   @media (max-width: 1200px) {
     .number {
-      font-size: 5rem; } }
+      font-size: 4.5rem; } }
   @media (max-width: 991px) {
     .number {
-      font-size: 5rem; } }
+      font-size: 4.5rem; } }
   @media (max-width: 768px) {
     .number {
       font-size: 4.5rem; } }
@@ -667,7 +669,10 @@ footer {
       font-weight: 700; }
       @media (max-width: 576px) {
         .cardBody div p {
-          font-size: 1.4rem; } }
+          font-size: 1.2rem; } }
+      @media (max-width: 500px) {
+        .cardBody div p {
+          font-size: 1.2rem; } }
   .cardBody > div:last-of-type {
     width: 100%;
     display: flex;
@@ -810,6 +815,20 @@ p.info-desc {
   justify-content: unset;
   align-items: unset;
   margin-bottom: 25px; }
+  .form-group input[type=submit] {
+    margin: 0 auto;
+    padding: 5px 0;
+    width: 200px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background-color: #e8e8e8;
+    border-radius: 4px;
+    font-weight: 500;
+    color: #00266e;
+    transition: all 200ms; }
+    .form-group input[type=submit]:hover {
+      transform: scale(1.2); }
 
 form label, form p {
   font-size: 18px;
@@ -830,7 +849,8 @@ form .input, form select, form textarea {
 
 form select {
   padding: 0 0 0 10px;
-  height: 4rem; }
+  height: 4rem;
+  font-weight: 600; }
   form select option {
     font-size: 1.7rem; }
 
@@ -841,6 +861,11 @@ form textarea {
   height: 14rem;
   color: #424242;
   resize: none; }
+  form textarea::-webkit-scrollbar {
+    width: 5px; }
+  form textarea::-webkit-scrollbar-thumb {
+    background-color: #acacac;
+    border-radius: 30px; }
 
 .contact-cont {
   padding: 100px 0;
@@ -854,6 +879,15 @@ form textarea {
     top: 0;
     left: 50%;
     transform: translate(-50%, 0); }
+
+.selected {
+  animation: selected 500ms; }
+
+@keyframes selected {
+  50% {
+    transform: scale(1.2); }
+  100% {
+    transform: scale(1); } }
 
 .form-title {
   margin-bottom: 2rem; }
@@ -945,6 +979,10 @@ form textarea {
   form {
     width: 100%; } }
 
+@media (min-width: 1400px) {
+  .cont .number, .cont p {
+    font-weight: 500; } }
+
 @media (min-width: 1200px) and (max-width: 1400px) {
   .grid-header nav {
     justify-content: center; }
@@ -957,7 +995,9 @@ form textarea {
     width: 90px;
     height: 90px; }
   .intro {
-    margin-top: 90px; } }
+    margin-top: 90px; }
+  .cont .number, .cont p {
+    font-weight: 500; } }
 
 @media (min-width: 992px) and (max-width: 1200px) {
   .grid-header {
@@ -974,7 +1014,9 @@ form textarea {
     .grid-header img {
       width: 70px;
       height: 70px;
-      padding: 5px; } }
+      padding: 5px; }
+  .cont .number, .cont p {
+    font-weight: 500; } }
 
 @media (min-width: 769px) and (max-width: 991px) {
   .grid-header {
@@ -1026,6 +1068,9 @@ form textarea {
     display: none; }
   .intro {
     margin-top: 155px; }
+  .about-us-p p {
+    text-align: justify;
+    margin: 0 15px; }
   .contact-cont {
     padding: 30px 0 0 0; }
   .form-cont {
@@ -1081,6 +1126,9 @@ form textarea {
     margin-top: 135px; }
   .cont {
     margin: 20px; }
+  .about-us-p p {
+    text-align: justify;
+    margin: 0 15px; }
   #about-us div:last-of-type p {
     line-height: 3.5rem; }
   .Cards {
@@ -1093,13 +1141,14 @@ form textarea {
     width: 315px;
     height: 420px; }
     .Card img {
-      display: none; }
+      height: 100px; }
   .cardBody {
-    height: 75%; }
+    height: 75%;
+    padding: 10px 20px 20px 20px; }
     .cardBody > div:last-of-type a, .cardBody > div:last-of-type button {
       padding: 15px 15px; }
   .cardHead {
-    height: 120px; }
+    height: 130px; }
     .cardHead p {
       left: 40%; }
   .cardFace-front {
